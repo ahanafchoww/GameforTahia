@@ -2,7 +2,7 @@ let player, guitar, coin;
 let coinsCollected = 0;
 let timeRemaining = 180;  // 3 minutes in seconds
 let level = 1;
-let guitarSpeed = 100;
+let guitarSpeed = 100;   // Initial guitar speed
 
 let game = new Phaser.Game({
     type: Phaser.AUTO,
@@ -16,13 +16,14 @@ let game = new Phaser.Game({
 });
 
 function preload() {
-    this.load.image('tahia', 'assets/tahia.png');
-    this.load.image('guitar', 'assets/guitar.png');
-    this.load.image('coin', 'assets/coin.png');
+    this.load.image('tahia', 'assets/tahia.png');  // Image of the player (Tahia)
+    this.load.image('guitar', 'assets/guitar.png'); // Image of the guitar
+    this.load.image('coin', 'assets/coin.png');    // Image of the coin
 }
 
 function create() {
     player = this.physics.add.image(100, 100, 'tahia').setCollideWorldBounds(true);
+
     createGuitar(this);
     createCoin(this);
 
