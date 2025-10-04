@@ -1,24 +1,20 @@
-/*
- * Basic styling for the game canvas.  The container is centred in
- * the browser window and the background colour helps separate the
- * canvas from the page.  You can modify these values to better suit
- * your design preferences.
- */
 body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
 }
 
 #gameContainer {
-  position: relative;
-  width: 800px;
-  height: 600px;
-  border: 1px solid #333;
-  background-color: #dfe6e9;
+    position: relative;
+    width: 800px;
+    height: 600px;
+}
+
+canvas {
+    background-color: #dfe6e9;
+    border: 1px solid black;
 }
